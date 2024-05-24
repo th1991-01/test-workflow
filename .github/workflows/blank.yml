@@ -34,7 +34,7 @@ jobs:
         run: echo Hello, world!
 
       # Runs a set of commands using the runners shell
-      - name: Pinnochio 
+      - name: Pinnochio setup
         run: |
           sudo apt install -qqy lsb-release curl
           sudo mkdir -p /etc/apt/keyrings
@@ -50,3 +50,10 @@ jobs:
           ls /opt/openrobots
           echo hishinuma
           ls ./
+
+      - name: Pinnochio build
+        run: |
+          mkdir build
+          cd build
+          cmake ..
+          echo hishinuma
