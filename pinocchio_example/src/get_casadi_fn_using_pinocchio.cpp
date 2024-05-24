@@ -2,7 +2,6 @@
 #include "pinocchio/parsers/urdf.hpp"
 #include "pinocchio/algorithm/aba.hpp"
 #include "pinocchio/algorithm/rnea.hpp"
-#include "pinocchio/autodiff/casadi.hpp"
 
 int main(){
     
