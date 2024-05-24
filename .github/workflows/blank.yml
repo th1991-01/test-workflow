@@ -49,7 +49,7 @@ jobs:
           echo $CMAKE_PREFIX_PATH
           ls /opt/openrobots
           echo hishinuma
-          ls ./
+          ls /opt/openrobots/lib/cmake/
 
       - name: Pinnochio build
         run: |
