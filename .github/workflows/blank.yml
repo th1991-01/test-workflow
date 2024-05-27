@@ -14,9 +14,6 @@ on:
   workflow_dispatch:
 
 env:
-  PATH: /opt/openrobots/bin:$PATH
-  PKG_CONFIG_PATH: /opt/openrobots/lib/pkgconfig:$PKG_CONFIG_PATH
-  LD_LIBRARY_PATH: /opt/openrobots/lib:$LD_LIBRARY_PATH
   CMAKE_PREFIX_PATH: /opt/openrobots:$CMAKE_PREFIX_PATH
 
 defaults:
@@ -51,11 +48,8 @@ jobs:
 
       - name: Pinnochio build
         run: |
-          echo $CMAKE_PREFIX_PATH
-          echo hishinuma
           mkdir build
           cd build
           cmake ..
           make
           ls
-          echo hishinuma
